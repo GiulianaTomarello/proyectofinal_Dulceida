@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+
+/* grid */
+
+
+
+.borde{
+    background-color: rgba(255, 255, 255);
+}
+
+.menu_general{
+    grid-column: span 2;
+ 
+}
+
+nav{
+    grid-area: nav;
+
+}
+
+.aside{
+    grid-area: aside;
+    
+}
+.contenedor_seccion{
+    grid-area: contenedor_seccion;
+
+}
+
+article{
+    grid-area: carrusel;
+}
+
+div #contenido{
+    grid-area: contenido;
+}
+
+.contenedor_cards{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6,auto);
+    grid-gap: 40px;
+}
+
+
+section #menu_general{
+    grid-area: menu_general;
+}
+
+section #video_presentacion{
+    grid-area: video_presentacion;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+/* estilos */
+
+header{
+    grid-area: header;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+nav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding: 8px;
+}
+
+li{
+    list-style: none;
+    position: relative;
+    margin-top: 12px;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+ul ul li {
+    display: block;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+.header_logos{
+    display: flex;
+    align-items: center;
+}
+
+.img_usuario,
+.img_carrito{
+    margin-right: 10px;
+}
+
+#menu_general{
+    margin-bottom: 40px;
+}
+
+.titulo_secciones{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    margin-bottom: 30px;
+}
+
+.contenedor_cards{
+    display: flex;
+    flex-direction: column;
+ }
+ 
+.nuevos_ingresos_seccion,
+.importadas_seccion,
+.bandoleras_seccion{
+    margin-top: 30px;
+}
+.secciones_vistarapida{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #F3EEEA;
+}
+
+.logos {
+    height: 30px;
+}
+
+.card{
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #AA7C7A;
+   }
+
+.aside{
+    border-radius: 16px;
+    background-color: #CCC2C0;
+}
+.img_aside{
+    margin-top: 50px;
+}
+#presentacion_dulceida,
+.videopresentacion{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.contenedor_video{
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #CCC2C0;
+    border-radius: 20px;
+}
+
+.anime{
+    transition: all 1s;
+}
+
+.anime:hover{
+    color: #AA7C7A;
+    font-size: 22px;
+}
+
+
+.pie{
+    background-color: rgb(126, 125, 126);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+@media screen and (min-width: 320px) {
+    #grilla{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 2px;
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas: "header" "nav"  "carrusel" "contenedor_seccion" "contenedor_seccion " "footer";
+    }
+    aside{
+        display: none;
+    }
+
+    article{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #grilla{
+        display: grid;
+        grid-template-columns: 25% 25% 25% auto;
+        grid-gap: 2px;
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas: "header header header header" "nav nav nav nav"  "carrusel carrusel carrusel carrusel" "contenedor_seccion contenedor_seccion contenedor_seccion aside" "contenedor_seccion contenedor_seccion contenedor_seccion aside" "footer footer footer footer";
+    }
+    aside{
+        display: block;
+    }
+    article{
+        display: block;
+    }
+}
+
+
+/* .promociones {
+    width: 90%;
+    height: 200px;
+    border: solid 1px black;
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.promos {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.videopresentacion {
+    max-width: 96%;
+    display: block;
+    margin: 10px auto;
+}
+
+fieldset {
+    border: 4px solid blue;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+}
+
+
+.formulario {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+input {
+    margin: 10px;
+}
+
+.datos {
+    margin: 20px;
+}
+ */
